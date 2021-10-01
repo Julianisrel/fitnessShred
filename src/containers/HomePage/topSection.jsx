@@ -7,7 +7,7 @@ import { Marginer } from "../../components/marginer";
 import { deviceSize } from "../../components/responsive";
 
 import TopSectionBackgroundImg from "../../images/landing-page.jpg";
- import TheBestSpecialistsImg from "../../images/Work only with the best.png";
+import TheBestSpecialistsImg from "../../images/Work only with the best.png";
 
 const TopSectionContainer = styled.div`
   width: 100%;
@@ -21,7 +21,7 @@ const TopSectionContainer = styled.div`
     background-position: 0px 0px;
   }
 `;
-
+// transparent background
 const BackgroundFilter = styled.div`
   width: 100%;
   height: 100%;
@@ -31,6 +31,7 @@ const BackgroundFilter = styled.div`
   flex-direction: column;
 `;
 
+//
 const TopSectionInnerContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -38,10 +39,10 @@ const TopSectionInnerContainer = styled.div`
   align-items: center;
   justify-content: space-evenly;
 `;
-
+// inner image of the container
 const StandoutImage = styled.div`
-  width: 44em;
-  height: 34em;
+  width: 0em;
+  height: 0em;
 
   img {
     width: 50%;
@@ -70,7 +71,7 @@ const SloganText = styled.h3`
     font-size: 24px;
   }
 `;
-
+//
 export function TopSection(props) {
   const { children } = props;
 
