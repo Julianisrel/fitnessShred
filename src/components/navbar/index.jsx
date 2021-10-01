@@ -46,7 +46,7 @@ const Seperator = styled.div`
 `;
 
 export function Navbar(props) {
-  const { useTransparent } = props;
+  const { useTransparent, user } = props;
 
   const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
 
@@ -58,11 +58,21 @@ export function Navbar(props) {
         {!isMobile && <Marginer direction="horizontal" margin={10} />}
         {!isMobile && <Seperator />}
         <Marginer direction="horizontal" margin={10} />
-        <Link to="/customer/access/signup">
-          <Button size={11}>Register</Button>
-        </Link>
+        {user ? (
+          <Link to="/customer/access/signup">
+            <Button size={11}>Logout</Button>
+          </Link>
+        ) : (
+          <Link to="/customer/access/signup">
+            <Button size={11}>Register</Button>
+          </Link>
+        )}
         <Marginer direction="horizontal" margin={8} />
-        <AnchorLink to="/customer/access/signin">Login</AnchorLink>
+        {user ? (
+          <AnchorLink to="/customer/access/signin">Profile</AnchorLink>
+        ) : (
+          <AnchorLink to="/customer/access/signin">Login</AnchorLink>
+        )}
       </AccessibilityContainer>
     </NavbarContainer>
   );

@@ -26,10 +26,13 @@ const ContentContainer = styled.div`
 `;
 
 export function HomePage(props) {
+
+  const user = localStorage.getItem('user');
+
   return (
     <PageContainer>
       <TopSection>
-        <Navbar useTransparent />
+        <Navbar useTransparent user={user} />
       </TopSection>
       <InnerPageContainer>
         <Marginer direction="vertical" margin="2em" />
