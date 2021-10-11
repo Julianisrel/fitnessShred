@@ -57,6 +57,12 @@ export function Navbar(props) {
         {!isMobile && <AnchorLink>Specialists Portal</AnchorLink>}
         {!isMobile && <Marginer direction="horizontal" margin={10} />}
         {!isMobile && <Seperator />}
+        <Marginer direction="horizontal" margin={8} />
+        {user ? (
+          <AnchorLink to="/questionare">Questionare</AnchorLink>
+        ) : (
+          <AnchorLink to="/customer/access/signin">Login</AnchorLink>
+        )}
         <Marginer direction="horizontal" margin={10} />
         {user ? (
           <Link to="/customer/access/signup">
@@ -66,12 +72,6 @@ export function Navbar(props) {
           <Link to="/customer/access/signup">
             <Button size={11}>Register</Button>
           </Link>
-        )}
-        <Marginer direction="horizontal" margin={8} />
-        {user ? (
-          <AnchorLink to="/customer/access/signin">Profile</AnchorLink>
-        ) : (
-          <AnchorLink to="/customer/access/signin">Login</AnchorLink>
         )}
       </AccessibilityContainer>
     </NavbarContainer>

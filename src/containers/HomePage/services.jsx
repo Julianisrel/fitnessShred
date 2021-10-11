@@ -74,7 +74,7 @@ export function Services(props) {
   };
 
   useEffect(() => {
-    fetchServices();
+    // fetchServices();
   }, []);
 
   return (

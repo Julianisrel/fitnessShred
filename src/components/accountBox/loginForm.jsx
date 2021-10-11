@@ -39,7 +39,7 @@ export function LoginForm(props) {
       .then(response => {
         if (response.data) {
           localStorage.setItem('user', JSON.stringify(response.data.user));
-          history.push(`/`);
+          history.push(`/questionare`);
         }
       })
       .catch(error => {
